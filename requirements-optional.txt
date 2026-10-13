@@ -1,0 +1,4 @@
+# Optional: only needed for downloading licensed Tushare market data.
+tushare>=1.2
+# VeighNa CTA is optional and requires its own supported runtime;
+# do not install blindly as part of the research environment.

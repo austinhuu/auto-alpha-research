@@ -1,0 +1,23 @@
+# Python / environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+# ALL generated results / private data / trained weights
+artifacts/
+sample_data/*.csv
+*.pt
+*.pth
+*.pkl
+*.parquet
+*.db
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+local_data/

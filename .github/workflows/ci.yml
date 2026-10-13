@@ -1,0 +1,20 @@
+name: Python research CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run automated tests
+        run: python -m pytest -q
+      - name: Run deterministic synthetic pipeline smoke test
+        run: python run_auto_alpha.py --demo --mode random --quick --experiment ci_smoke
